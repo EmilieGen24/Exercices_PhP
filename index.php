@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<!-- Cours PhP -->
 <?php
 $backgroundColorCustom = "maClasse";
 $number = 2;
 ?>
 <h1><?php echo "coucou";?></h1>
-
     <h2>
         <?php
         if($number == 1){
@@ -24,7 +25,7 @@ $number = 2;
     <p>Lorem ipsum</p>
 </section>
 
-<!-- comme le console log -->
+<!-- Exercices PHP -->
 
 <body>
     <h1>Exo 1 - Boucle for {...}</h1>
@@ -177,24 +178,36 @@ $number = 2;
         <h1>Exo 13 - Recherche de la plus petite valeur dans un tableau d’entiers</h1>
         <p>
             <?php
-            $tableau = [""];
-
+            $tableau = ["2","6","12","32"];
+            echo $min = min($tableau);
             
             ?>
         </p>
 
+        <h1>Exo 14 - Tri d’un tableau d’entiers par ordre croissant</h1>
+        <p>
+            <?php
+            $tableau = ["2","6","12","32"];
+            sort($tableau);
+            foreach($tableau as $val){
+                echo $val . "<br>";
+            }
+                        
+            ?>
+        </p>
 
-
-
-
-    
-
-
-
-
-
-
-
+        <h1>Exo 15 - Table des multiplications</h1>
+        <table border = 1>
+            <?php
+            for ($x = 1 ; $x <=9 ; $x++){
+                echo "<tr>";
+                for ($y = 1 ; $y <=9 ; $y++){
+                    echo "<td>" . $result = $x * $y . "</td>";
+                }
+                echo "</tr>";
+            }
+            ?>
+        </table>
 
 </body>
 </html>
